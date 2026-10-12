@@ -109,3 +109,25 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.nav-links{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a,
+.logo {
+  color: #183b72;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #e13d35
+}
