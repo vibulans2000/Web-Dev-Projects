@@ -150,5 +150,42 @@ code {
 
 .about {
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+
+  margin-top: 4rem;
+  padding: 1.5rem;
+  background: var(--code-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 12px;
+}
+
+.project-card h3 {
+  color: var(--text-h);
+}
+
+.project-card p {
+  color: var(--text);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-tech span {
+  padding: 0.3rem 0.6rem;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border-radius: 6px;
+
+}

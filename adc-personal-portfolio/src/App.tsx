@@ -35,12 +35,62 @@ function About() {
   )
 }
 
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  tech: string[];
+};
+
+const projects: Project[] = [
+  {
+    id: 1,
+    title: "SpaceShooter Arcade Game",
+    description: "SpaceShooter is a small 2D arcade-style shooter where the player control a spaceship (or similar) and must dodge or shoot obstacles / enemies, survive as long as possible, maybe gain points / upgrades.This project is intended as a learning / practice project in Godot and game development workflows.",
+    tech: ["GDScript", "Git"],
+  },
+  {
+    id: 2,
+    title: "Hospital Management System",
+    description: "An intuitive, data-driven web application designed to streamline daily healthcare operations and optimize medical facility workflows. Built with efficiency in mind, this platform bridges the gap between healthcare administrative needs and modern web technology.",
+    tech: ["Python", "SQL", "Streamlit"],
+  },
+];
+
+function ProjectCard({ project }: { project: Project }) {
+  return (
+    <article className="project-card">
+      <h3>{project.title}</h3>
+      <p>{project.description}</p>
+      <div className="project-tech">
+        {project.tech.map((item) => (
+          <span key={item}>{item}</span>
+        ))}
+      </div>
+    </article>
+  );
+}
+
+function Projects() {
+  return (
+    <section id="projects" className="projects">
+      <h2>Projects</h2>
+      <div className="project-grid">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function MyApp() {
   return (
     <main className="page">
       <Navbar />
       <Hero />
       <About />
+      <Projects />
     </main>
   );
 }
