@@ -12,7 +12,7 @@ function Navbar(){
       </nav>
     </header>
   );
-}
+} 
 
 function Hero() {
   return (
